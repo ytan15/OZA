@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 213fbf3aa3fcdd64cbe5883849355477
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PLYRIdleTiled_T_0
+    21300002: PLYRIdleTiled_T_1
+    21300004: PLYRIdleTiled_T_2
+    21300006: PLYRIdleTiled_T_3
+    21300008: PLYRIdleTiled_T_4
+    21300010: PLYRIdleTiled_T_5
+    21300012: PLYRIdleTiled_T_6
+    21300014: PLYRIdleTiled_T_7
+    21300016: PLYRIdleTiled_T_8
+    21300018: PLYRIdleTiled_T_9
+    21300020: PLYRIdleTiled_T_10
+    21300022: PLYRIdleTiled_T_11
+    21300024: PLYRIdleTiled_T_12
+    21300026: PLYRIdleTiled_T_13
+    21300028: PLYRIdleTiled_T_14
+    21300030: PLYRIdleTiled_T_15
+    21300032: PLYRIdleTiled_T_16
+    21300034: PLYRIdleTiled_T_17
+    21300036: PLYRIdleTiled_T_18
+    21300038: PLYRIdleTiled_T_19
+    21300040: PLYRIdleTiled_T_20
+    21300042: PLYRIdleTiled_T_21
+    21300044: PLYRIdleTiled_T_22
+    21300046: PLYRIdleTiled_T_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PLYRIdleTiled_T_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 293
+        width: 37
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 293
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 293
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 293
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 293
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 293
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 197
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 197
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 197
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_9
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 197
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 197
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 197
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 101
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 101
+        width: 36
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 101
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_15
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 101
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_16
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 101
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 101
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_18
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_20
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_21
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRIdleTiled_T_23
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 5
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
