@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 997f342b558a6864a97606b3843d2fad
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PLYRRunTiled_T_0
+    21300002: PLYRRunTiled_T_1
+    21300004: PLYRRunTiled_T_2
+    21300006: PLYRRunTiled_T_3
+    21300008: PLYRRunTiled_T_4
+    21300010: PLYRRunTiled_T_5
+    21300012: PLYRRunTiled_T_6
+    21300014: PLYRRunTiled_T_7
+    21300016: PLYRRunTiled_T_8
+    21300018: PLYRRunTiled_T_9
+    21300020: PLYRRunTiled_T_10
+    21300022: PLYRRunTiled_T_11
+    21300024: PLYRRunTiled_T_12
+    21300026: PLYRRunTiled_T_13
+    21300028: PLYRRunTiled_T_14
+    21300030: PLYRRunTiled_T_15
+    21300032: PLYRRunTiled_T_16
+    21300034: PLYRRunTiled_T_17
+    21300036: PLYRRunTiled_T_18
+    21300038: PLYRRunTiled_T_19
+    21300040: PLYRRunTiled_T_20
+    21300042: PLYRRunTiled_T_21
+    21300044: PLYRRunTiled_T_22
+    21300046: PLYRRunTiled_T_23
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +49,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +66,246 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PLYRRunTiled_T_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 297
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 293
+        width: 51
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 291
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 290
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 291
+        width: 45
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 292
+        width: 51
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 197
+        width: 55
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 197
+        width: 57
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 196
+        width: 56
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 199
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_10
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 198
+        width: 53
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 197
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 99
+        width: 50
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 97
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 97
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 97
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 98
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_17
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 98
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 6
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 9
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 9
+        width: 56
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_22
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 9
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PLYRRunTiled_T_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 9
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
