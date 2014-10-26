@@ -1,0 +1,1 @@
+Addnoise 2.45 gaussian monochrome - Character Sprite noise
