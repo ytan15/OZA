@@ -1,0 +1,3 @@
+Render at 96x96 (human height), downsample to 66%, apply outline style. Possibly contrast +60.
+
+Objects usually use a Sharpen Outlines pass.
