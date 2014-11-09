@@ -10,7 +10,7 @@ public class CharacterKontroller : MonoBehaviour {
 
 	bool grounded = false;
 	public Transform groundCheck;
-	float groundRadius = 0.05f;
+	float groundRadius = 0.1f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 50f;
 
