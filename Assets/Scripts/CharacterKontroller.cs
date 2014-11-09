@@ -8,6 +8,12 @@ public class CharacterKontroller : MonoBehaviour {
 
 	Animator anim;
 
+	bool grounded = false;
+	public Transform groundCheck;
+	float groundRadius = 0.05f;
+	public LayerMask whatIsGround;
+	public float jumpForce = 50f;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent < Animator > ();
@@ -15,6 +21,12 @@ public class CharacterKontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		anim.SetBool ("Ground", grounded);
+
+		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+
+
 		float move = Input.GetAxis ("Horizontal");
 
 		anim.SetFloat ("Speed", Mathf.Abs (move));
@@ -26,6 +38,15 @@ public class CharacterKontroller : MonoBehaviour {
 		else if (move < 0 && facingRight)
 			Flip ();
 	
+	}
+
+	void Update()
+	{
+		if (grounded && Input.GetKeyDown (KeyCode.Space))
+		{
+			anim.SetBool ("Ground",false);
+			rigidbody2D.AddForce (new Vector2(0, jumpForce));
+		}
 	}
 
 	void Flip()
