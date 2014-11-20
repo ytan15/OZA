@@ -1,0 +1,16 @@
+I dub it the number bullshit system. it chaotic, yet predictable values for songs.
+
+Pros: 
+♦ Songs can be defined with a SINGLE NUMBER. That's AWESOME and makes adding more super easy.
+	EX: Mary Had a Little Lamb = 254
+	EX:	Ode to Joy = 1242
+♦ There should be no way to get the same result from any two combinations.
+♦ Could fairly easily add a timing and bpm system, just by adding a number to the song's value for each passed beat.
+
+
+Cons:
+♦ Must be manually reset each time you want to start a song. Could be a gameplay mechanic maybe?
+	♦ Maybe you get an aura when you start playing notes, which goes away automatically when you complete a combo.
+	  But if you mess up, you can clear the aura, or I would call it "scratch", with numpad 0 or something for a VERY small amount
+	  of aoe damage, a tiny consolation prize for being terrible at playing music.
+♦ There might actually be some way to get the same result from two combos... who knows.
