@@ -8,6 +8,11 @@ public class CombatController : MonoBehaviour {
 	public int notesPlayed;
 	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f};	//A stupid 28 array
 
+	public Rigidbody2D musicNoteSm;
+	public Transform noteOrigin
+
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -61,4 +66,10 @@ public class CombatController : MonoBehaviour {
 
 
 	}
+
+	void FireSm () {
+
+	}
+
+
 }
