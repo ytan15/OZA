@@ -30,8 +30,7 @@ public class CombatController : MonoBehaviour {
 	Rigidbody2D noteSmInstance;
 	public Transform noteOrigin;
 	public Transform heWhoShoots;
-	public LayerMask whatCanBeHit;
-	bool noteHit = false;
+
 
 
 
@@ -98,17 +97,19 @@ public class CombatController : MonoBehaviour {
 			FireSm ();
 		}	
 
+		if (Input.GetKeyDown (KeyCode.Keypad0)) //Reset button
+		{
+			notesPlayed = 0;
+			songValue = 0;
+		}
+
 		if (notesPlayed >= 29) //Resets the randomness array.
 			notesPlayed = 0;
 
-		// Deletion of projectiles, doesn't work.		
-//		noteHit = Physics2D.OverlapCircle (noteSmInstance.position, .1f, whatCanBeHit);
-//		if (noteHit == true)
-//			Destroy (noteSmInstance);
 
 
-	
-	
+
+
 	
 	}
 

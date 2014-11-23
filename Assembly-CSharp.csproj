@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterKontroller.cs" />
      <Compile Include="Assets\Scripts\CombatController.cs" />
+     <Compile Include="Assets\Scripts\NoteDestruction.cs" />
      <None Include="Assets\Songs\MHLL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
