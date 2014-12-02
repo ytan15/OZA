@@ -18,6 +18,18 @@ public class CombatController : MonoBehaviour {
 	public float noteEighth = 13f;
 	public float noteNinth = 15f;
 
+
+	public AudioClip noteFirstS;
+	public AudioClip noteSecondS;
+	public AudioClip noteThirdS;
+	public AudioClip noteFourthS;
+	public AudioClip noteFifthS;
+	public AudioClip noteSixthS;
+	public AudioClip noteSeventhS;
+	public AudioClip noteEighthS;
+	public AudioClip noteNinthS;
+
+
 	public bool ninthUnlocked = false; //Has the player unlocked the use of nine notes?
 
 
@@ -47,54 +59,63 @@ public class CombatController : MonoBehaviour {
 			songValue += (noteFirst * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteFirstS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad2))
 		{
 			songValue += (noteSecond * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteSecondS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad3))
 		{
 			songValue += (noteThird * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteThirdS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad4))
 		{
 			songValue += (noteFourth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteFourthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad5)) 
 		{
 			songValue += (noteFifth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteFifthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad6))
 		{
 			songValue += (noteSixth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteSixthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad7))
 		{
 			songValue += (noteSeventh * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteSeventhS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad8))
 		{
 			songValue += (noteEighth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteEighthS, noteOrigin.position);
 		}	
 		if (ninthUnlocked && canPlay && Input.GetKeyDown (KeyCode.Keypad9))	//Extra note
 		{
 			songValue += (noteNinth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
 			notesPlayed++;
 			FireSm ();
+			AudioSource.PlayClipAtPoint(noteNinthS, noteOrigin.position);
 		}	
 
 		if (Input.GetKeyDown (KeyCode.Keypad0)) //Reset button
