@@ -43,14 +43,16 @@ public class CombatController : MonoBehaviour {
 	public Transform noteOrigin;
 	public Transform heWhoShoots;
 
+	public Animator anim;
+
 
 
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		// All of the keys that can be played are below, referencing the currently active scale
@@ -127,7 +129,7 @@ public class CombatController : MonoBehaviour {
 		if (notesPlayed >= 29) //Resets the randomness array.
 			notesPlayed = 0;
 
-
+		anim.SetFloat ("SongValue", songValue);
 
 
 
