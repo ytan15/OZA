@@ -39,9 +39,12 @@ public class CombatController : MonoBehaviour {
 	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f};	//A stupid 28 array
 
 	public Rigidbody2D musicNoteSm; //All variables used to fire physical notes.
+	public Rigidbody2D musicNoteMd;
 	Rigidbody2D noteSmInstance;
+	Rigidbody2D noteMdInstance;
 	public Transform noteOrigin;
 	public Transform heWhoShoots;
+	float specialAttackValue = 0; //On a per-special basis, this controls how many times a combo runs when activated.
 
 	public Animator anim;
 
@@ -55,6 +58,10 @@ public class CombatController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		anim.SetFloat ("SongValue", songValue); //Aura definition
+
+		////// NOTE PLAYING //////
+
 		// All of the keys that can be played are below, referencing the currently active scale
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad1))
 		{
@@ -120,17 +127,27 @@ public class CombatController : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(noteNinthS, noteOrigin.position);
 		}	
 
+
+		////// RESETS //////
+
 		if (Input.GetKeyDown (KeyCode.Keypad0)) //Reset button
 		{
 			notesPlayed = 0;
 			songValue = 0;
+			specialAttackValue = 0;
 		}
 
 		if (notesPlayed >= 29) //Resets the randomness array.
 			notesPlayed = 0;
 
-		anim.SetFloat ("SongValue", songValue);
 
+		////// COMBOS //////
+
+		if (specialAttackValue < 1 && songValue == 357)  //Mary Had a Little Lamb 1
+		{  
+						FireMd ();
+						specialAttackValue++;
+		}
 
 
 	
@@ -139,7 +156,11 @@ public class CombatController : MonoBehaviour {
 	void FireSm () {
 		noteSmInstance = Instantiate(musicNoteSm, noteOrigin.position, noteOrigin.rotation) as Rigidbody2D;
 		noteSmInstance.velocity = new Vector2 ((heWhoShoots.localScale.x * 4), 0);
+		}
 
+	void FireMd () {
+		noteMdInstance = Instantiate(musicNoteMd, noteOrigin.position, noteOrigin.rotation) as Rigidbody2D;
+		noteMdInstance.velocity = new Vector2 ((heWhoShoots.localScale.x * 4), 0);
 	}
 
 
