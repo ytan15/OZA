@@ -48,8 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterKontroller.cs" />
      <Compile Include="Assets\Scripts\CombatController.cs" />
+     <Compile Include="Assets\Scripts\MusicMenuScript.cs" />
      <Compile Include="Assets\Scripts\NoteDestruction.cs" />
-     <Compile Include="Assets\Scripts\UIScreenTest.cs" />
      <Compile Include="Assets\Scripts\ZombieScript.cs" />
      <None Include="Assets\Songs\MHLL.txt" />
  <Reference Include="UnityEngine.UI">

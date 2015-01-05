@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIScreenTest : MonoBehaviour {
+public class MusicMenuScript : MonoBehaviour {
 
 	public Canvas uiCanvas;
 	public Transform menuObject;

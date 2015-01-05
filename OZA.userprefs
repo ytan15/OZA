@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIScreenTest.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MusicMenuScript.cs">
     <Files>
-      <File FileName="OZA.sln" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScreenTest.cs" Line="19" Column="7" />
-      <File FileName="Assets\Scripts\CombatController.cs" Line="146" Column="78" />
-      <File FileName="Assets\Scripts\ZombieScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterKontroller.cs" Line="27" Column="89" />
+      <File FileName="Assets\Scripts\MusicMenuScript.cs" Line="10" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
