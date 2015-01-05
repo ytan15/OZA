@@ -3,16 +3,20 @@ using System.Collections;
 
 public class MusicMenuScript : MonoBehaviour {
 
-	public Canvas uiCanvas;
+	public Canvas mainCanvas;
+	public Canvas musicMenuCanvas;
+	public Canvas instrumentsMenuCanvas;
+	public Canvas scalesMenuCanvas;
+	public Canvas songsMenuCanvas;
 	public Transform menuObject;
 	public LayerMask menuOpener;
-	public float openRadius = 10f;
+	public float openRadius = 0.25f;
 	bool menuCanBeOpened = false;
 	bool menuCurrentlyOpen = false;
 
 	// Use this for initialization
 	void Start () {
-		uiCanvas.enabled = false;
+		KillAllMenus ();
 	}
 	
 	// Update is called once per frame
@@ -20,17 +24,25 @@ public class MusicMenuScript : MonoBehaviour {
 		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener);
 		if (menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
 		{
-			uiCanvas.enabled = true;
+			KillAllMenus ();	//Ensures a fresh menu state
+			mainCanvas.enabled = true;
+			musicMenuCanvas.enabled = true;
 			menuCurrentlyOpen = true;
 		}
 		if (menuCurrentlyOpen && Input.GetKeyDown (KeyCode.Escape)) 	//Closing menu
 		{
-			uiCanvas.enabled = false;
-			menuCurrentlyOpen = false;
+			KillAllMenus ();
 		}
 	
 	
 	}
-
+	public void KillAllMenus () {
+		mainCanvas.enabled = false;
+		musicMenuCanvas.enabled = false;
+		instrumentsMenuCanvas.enabled = false;
+		scalesMenuCanvas.enabled = false;
+		songsMenuCanvas.enabled = false;
+		menuCurrentlyOpen = false;
+	}
 
 }
