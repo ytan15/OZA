@@ -26,7 +26,7 @@ public class MusicMenuScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener);
-		if (menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
+		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
 		{
 			KillAllMenus ();	//Ensures a fresh menu state
 			mainCanvas.enabled = true;
@@ -36,8 +36,8 @@ public class MusicMenuScript : MonoBehaviour {
 		}
 		if (menuCurrentlyOpen && Input.GetKeyDown (KeyCode.Escape)) 	//Closing menu
 		{
-			KillAllMenus ();
 			MenuCloseSound ();
+			KillAllMenus ();
 		}
 	
 	
@@ -51,13 +51,16 @@ public class MusicMenuScript : MonoBehaviour {
 		menuCurrentlyOpen = false;
 	}
 	public void ClickSound () {
-		AudioSource.PlayClipAtPoint (clickSound, menuObject.position);
+		if (menuCurrentlyOpen)
+			AudioSource.PlayClipAtPoint (clickSound, menuObject.position);
 	}
 	public void MenuOpenSound () {
-		AudioSource.PlayClipAtPoint (menuOpenSound, menuObject.position);
+		if (!menuCurrentlyOpen)
+			AudioSource.PlayClipAtPoint (menuOpenSound, menuObject.position);
 	}
 	public void MenuCloseSound () {
-		AudioSource.PlayClipAtPoint (menuCloseSound, menuObject.position);
+		if (menuCurrentlyOpen)
+			AudioSource.PlayClipAtPoint (menuCloseSound, menuObject.position);
 	}
 
 
