@@ -18,14 +18,18 @@ public class MusicMenuScript : MonoBehaviour {
 	public AudioClip menuOpenSound;
 	public AudioClip menuCloseSound;
 
+	Animator anim;
+
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent < Animator > ();
 		KillAllMenus ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener);
+		anim.SetBool ("Animating", menuCanBeOpened);
 		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
 		{
 			KillAllMenus ();	//Ensures a fresh menu state
