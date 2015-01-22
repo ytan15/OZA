@@ -48,7 +48,7 @@ public class CombatController : MonoBehaviour {
 
 	public Animator anim;
 
-
+	public Light auraLight;
 
 
 	// Use this for initialization
@@ -58,7 +58,16 @@ public class CombatController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		anim.SetFloat ("SongValue", songValue); //Aura definition
+
+		////// AURA STUFF //////
+
+		anim.SetFloat ("SongValue", songValue); //Aura definition. Governs when it should animate.
+
+		if (songValue >= 1)  //If aura exists, light will shine
+			auraLight.enabled = true;
+		else
+			auraLight.enabled = false;
+
 
 		////// NOTE PLAYING //////
 
