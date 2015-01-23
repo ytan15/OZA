@@ -154,11 +154,27 @@ public class CombatController : MonoBehaviour {
 
 		if (specialAttackValue < 1 && songValue == 357)  //Mary Had a Little Lamb 1
 		{  
-						FireMd ();
-						specialAttackValue++;
+			FireMd ();
+			specialAttackValue++;
+		}
+		if (specialAttackValue < 2 && songValue == 655)  //Mary Had a Little Lamb 2
+		{  
+			FireMd ();
+			specialAttackValue++;
+		}
+		if (specialAttackValue < 3 && songValue == 1295)  //Mary Had a Little Lamb 3
+		{  
+			FireMd ();
+			specialAttackValue++;
+		}
+		if (specialAttackValue < 4 && songValue == 6710)  //Mary Had a Little Lamb 4
+		{  
+			FireMd ();
+			specialAttackValue++;
 		}
 
-
+	
+	
 	
 	}
 
