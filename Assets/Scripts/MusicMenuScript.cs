@@ -9,15 +9,19 @@ public class MusicMenuScript : MonoBehaviour {
 	public Canvas scalesMenuCanvas;
 	public Canvas songsMenuCanvas;
 	public Transform menuObject;			//The item that opens the menu
-	public LayerMask menuOpener;			//Player
+	public LayerMask menuOpener;			//Player, basically
 	public float openRadius = 0.25f;		//How close the player must be
+
+	// Control variables
 	bool menuCanBeOpened = false;
 	bool menuCurrentlyOpen = false;
 
+	// Sounds
 	public AudioClip clickSound;
 	public AudioClip menuOpenSound;
 	public AudioClip menuCloseSound;
 
+	// Visual
 	Animator anim;
 
 	// Use this for initialization
@@ -28,8 +32,8 @@ public class MusicMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener);
-		anim.SetBool ("Animating", menuCanBeOpened);
+		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener); //When in range, menu can be opened
+		anim.SetBool ("Animating", menuCanBeOpened); // Animate the menu object if the menu can be opened
 		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
 		{
 			KillAllMenus ();	//Ensures a fresh menu state
@@ -54,6 +58,9 @@ public class MusicMenuScript : MonoBehaviour {
 		songsMenuCanvas.enabled = false;
 		menuCurrentlyOpen = false;
 	}
+	// Unity's UI tools require public void functions if you want to call them through their system.
+	// All menu sounds are functions below.
+	// This is an easy way to call sounds through the UI toolset.
 	public void ClickSound () {
 		if (menuCurrentlyOpen)
 			AudioSource.PlayClipAtPoint (clickSound, menuObject.position);

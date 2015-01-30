@@ -18,7 +18,7 @@ public class CombatController : MonoBehaviour {
 	public float noteEighth = 13f;
 	public float noteNinth = 15f;
 
-
+	// All of the sounds of the currently active scale are defined here
 	public AudioClip noteFirstS;
 	public AudioClip noteSecondS;
 	public AudioClip noteThirdS;
@@ -38,7 +38,8 @@ public class CombatController : MonoBehaviour {
 	public int notesPlayed; //For use in the randomizer array
 	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f};	//A stupid 28 array
 
-	public Rigidbody2D musicNoteSm; //All variables used to fire physical notes.
+	// All variables used to fire physical notes.
+	public Rigidbody2D musicNoteSm;
 	public Rigidbody2D musicNoteMd;
 	Rigidbody2D noteSmInstance;
 	Rigidbody2D noteMdInstance;
@@ -46,8 +47,8 @@ public class CombatController : MonoBehaviour {
 	public Transform heWhoShoots;
 	float specialAttackValue = 0; //On a per-special basis, this controls how many times a combo runs when activated.
 
+	// For visual manipulation
 	public Animator anim;
-
 	public Light auraLight;
 
 
@@ -177,6 +178,8 @@ public class CombatController : MonoBehaviour {
 	
 	
 	}
+
+		////// PROJECTILES AND EFFECTS //////	
 
 	void FireSm () {
 		noteSmInstance = Instantiate(musicNoteSm, noteOrigin.position, noteOrigin.rotation) as Rigidbody2D;
