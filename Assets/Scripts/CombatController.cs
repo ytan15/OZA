@@ -35,7 +35,7 @@ public class CombatController : MonoBehaviour {
 
 	public float songValue; //The variable that tracks the current value of your song.
 	bool canPlay = true; //Checks if you are currently allowed to play.
-	public int notesPlayed; //For use in the randomizer array
+	public int randomizerIndex; //For use in the randomizer array
 	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f};	//A stupid 28 array
 
 	// All variables used to fire physical notes.
@@ -75,64 +75,64 @@ public class CombatController : MonoBehaviour {
 		// All of the keys that can be played are below, referencing the currently active scale
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad1))
 		{
-			songValue += (noteFirst * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteFirst * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFirst % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteFirstS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad2))
 		{
-			songValue += (noteSecond * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteSecond * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSecond % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteSecondS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad3))
 		{
-			songValue += (noteThird * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteThird * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteThird % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteThirdS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad4))
 		{
-			songValue += (noteFourth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteFourth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFourth % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteFourthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad5)) 
 		{
-			songValue += (noteFifth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteFifth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFifth % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteFifthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad6))
 		{
-			songValue += (noteSixth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteSixth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSixth % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteSixthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad7))
 		{
-			songValue += (noteSeventh * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteSeventh * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSeventh % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteSeventhS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad8))
 		{
-			songValue += (noteEighth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteEighth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteEighth % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteEighthS, noteOrigin.position);
 		}	
 		if (ninthUnlocked && canPlay && Input.GetKeyDown (KeyCode.Keypad9))	//Extra note
 		{
-			songValue += (noteNinth * randomNumbers[notesPlayed]) + Mathf.Pow(notesPlayed,2);
-			notesPlayed++;
+			songValue += (noteNinth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteNinth % (randomizerIndex + 1));
+			randomizerIndex++;
 			FireSm ();
 			AudioSource.PlayClipAtPoint(noteNinthS, noteOrigin.position);
 		}	
@@ -142,33 +142,33 @@ public class CombatController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Keypad0)) //Reset button
 		{
-			notesPlayed = 0;
+			randomizerIndex = 0;
 			songValue = 0;
 			specialAttackValue = 0;
 		}
 
-		if (notesPlayed >= 29) //Resets the randomness array.
-			notesPlayed = 0;
+		if (randomizerIndex >= 29) //Resets the randomness array.
+			randomizerIndex = 0;
 
 
 		////// COMBOS //////
 
-		if (specialAttackValue < 1 && songValue == 357)  //Mary Had a Little Lamb 1
+		if (specialAttackValue < 1 && songValue == 364)  //Mary Had a Little Lamb 1
 		{  
 			FireMd ();
 			specialAttackValue++;
 		}
-		if (specialAttackValue < 2 && songValue == 655)  //Mary Had a Little Lamb 2
+		if (specialAttackValue < 2 && songValue == 678)  //Mary Had a Little Lamb 2
 		{  
 			FireMd ();
 			specialAttackValue++;
 		}
-		if (specialAttackValue < 3 && songValue == 1295)  //Mary Had a Little Lamb 3
+		if (specialAttackValue < 3 && songValue == 1329)  //Mary Had a Little Lamb 3
 		{  
 			FireMd ();
 			specialAttackValue++;
 		}
-		if (specialAttackValue < 4 && songValue == 6710)  //Mary Had a Little Lamb 4
+		if (specialAttackValue < 4 && songValue == 6856)  //Mary Had a Little Lamb 4
 		{  
 			FireMd ();
 			specialAttackValue++;
