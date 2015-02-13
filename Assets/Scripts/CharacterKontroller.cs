@@ -24,10 +24,10 @@ public class CharacterKontroller : MonoBehaviour {
 	//  FixedUpdate is called once per frame
 	void FixedUpdate () {
 		// Jumping
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("Ground", grounded);
+		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+		anim.SetBool("Ground", grounded);
 
-		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
 
 		//Horizontal Movement
@@ -40,9 +40,9 @@ public class CharacterKontroller : MonoBehaviour {
 		anim.SetFloat ("Speed", Mathf.Abs (move));
 
 		if (notTraversable)
-			rigidbody2D.velocity = new Vector2 (0, rigidbody2D.velocity.y);
+			rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
 		else
-			rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 		
 		if (move > 0 && !facingRight)
 			Flip ();
@@ -54,12 +54,12 @@ public class CharacterKontroller : MonoBehaviour {
 	void Update()
 	{
 
-		Debug.DrawLine (sightStart.position, sightEnd.position, Color.blue); //Visual Representation of Ray
-		notTraversable = Physics2D.Linecast (sightStart.position, sightEnd.position, whatIsGround);
+		Debug.DrawLine(sightStart.position, sightEnd.position, Color.blue); //Visual Representation of Ray Jesus
+		notTraversable = Physics2D.Linecast(sightStart.position, sightEnd.position, whatIsGround);
 
-		if (grounded && Input.GetKeyDown (KeyCode.Space))
+		if (grounded && Input.GetKeyDown(KeyCode.Space))
 		{
-			anim.SetBool ("Ground",false);
+			anim.SetBool("Ground",false);
 			rigidbody2D.AddForce (new Vector2(0, jumpForce));
 		}
 	}

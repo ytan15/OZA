@@ -77,63 +77,63 @@ public class CombatController : MonoBehaviour {
 		{
 			songValue += (noteFirst * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFirst % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteFirstS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad2))
 		{
 			songValue += (noteSecond * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSecond % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteSecondS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad3))
 		{
 			songValue += (noteThird * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteThird % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteThirdS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad4))
 		{
 			songValue += (noteFourth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFourth % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteFourthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad5)) 
 		{
 			songValue += (noteFifth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteFifth % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteFifthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad6))
 		{
 			songValue += (noteSixth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSixth % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteSixthS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad7))
 		{
 			songValue += (noteSeventh * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteSeventh % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteSeventhS, noteOrigin.position);
 		}
 		if (canPlay && Input.GetKeyDown (KeyCode.Keypad8))
 		{
 			songValue += (noteEighth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteEighth % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteEighthS, noteOrigin.position);
 		}	
 		if (ninthUnlocked && canPlay && Input.GetKeyDown (KeyCode.Keypad9))	//Extra note
 		{
 			songValue += (noteNinth * randomNumbers[randomizerIndex]) + Mathf.Pow(randomizerIndex,2) + (noteNinth % (randomizerIndex + 1));
 			randomizerIndex++;
-			FireSm ();
+			FireSm();
 			AudioSource.PlayClipAtPoint(noteNinthS, noteOrigin.position);
 		}	
 
@@ -155,23 +155,26 @@ public class CombatController : MonoBehaviour {
 
 		if (specialAttackValue < 1 && songValue == 364)  //Mary Had a Little Lamb 1
 		{  
-			FireMd ();
+			FireMd();
 			specialAttackValue++;
 		}
 		if (specialAttackValue < 2 && songValue == 678)  //Mary Had a Little Lamb 2
 		{  
-			FireMd ();
+			FireMd();
 			specialAttackValue++;
 		}
 		if (specialAttackValue < 3 && songValue == 1329)  //Mary Had a Little Lamb 3
 		{  
-			FireMd ();
+			FireMd();
 			specialAttackValue++;
 		}
 		if (specialAttackValue < 4 && songValue == 6856)  //Mary Had a Little Lamb 4
 		{  
-			FireMd ();
+			FireMd();
 			specialAttackValue++;
+			randomizerIndex = 0;
+			songValue = 0;
+			specialAttackValue = 0;
 		}
 
 	
@@ -183,12 +186,12 @@ public class CombatController : MonoBehaviour {
 
 	void FireSm () {
 		noteSmInstance = Instantiate(musicNoteSm, noteOrigin.position, noteOrigin.rotation) as Rigidbody2D;
-		noteSmInstance.velocity = new Vector2 ((heWhoShoots.localScale.x * 4), 0);
+		noteSmInstance.velocity = new Vector2((heWhoShoots.localScale.x * 4), 0);
 		}
 
 	void FireMd () {
 		noteMdInstance = Instantiate(musicNoteMd, noteOrigin.position, noteOrigin.rotation) as Rigidbody2D;
-		noteMdInstance.velocity = new Vector2 ((heWhoShoots.localScale.x * 4), 0);
+		noteMdInstance.velocity = new Vector2((heWhoShoots.localScale.x * 4), 0);
 	}
 
 

@@ -11,8 +11,14 @@ public class ZombieScript : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
+	// Update is called constantly
 	void Update () {
 	
+	}
+
+
+	// FixedUpdate is called once per frame
+	void FixedUpdate () {
+		
 	}
 }

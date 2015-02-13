@@ -25,32 +25,32 @@ public class MusicMenuScript : MonoBehaviour {
 	Animator anim;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		anim = GetComponent < Animator > ();
-		KillAllMenus ();
+		KillAllMenus();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		menuCanBeOpened = Physics2D.OverlapCircle (menuObject.position, openRadius, menuOpener); //When in range, menu can be opened
-		anim.SetBool ("Animating", menuCanBeOpened); // Animate the menu object if the menu can be opened
-		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown (KeyCode.E)) 	// Opening menu
+		menuCanBeOpened = Physics2D.OverlapCircle(menuObject.position, openRadius, menuOpener); //When in range, menu can be opened
+		anim.SetBool("Animating", menuCanBeOpened); // Animate the menu object if the menu can be opened
+		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown(KeyCode.E)) 	// Opening menu
 		{
-			KillAllMenus ();	//Ensures a fresh menu state
+			KillAllMenus();	//Ensures a fresh menu state
 			mainCanvas.enabled = true;
 			musicMenuCanvas.enabled = true;
-			MenuOpenSound ();
+			MenuOpenSound();
 			menuCurrentlyOpen = true;
 		}
 		if (menuCurrentlyOpen && Input.GetKeyDown (KeyCode.Escape)) 	//Closing menu
 		{
-			MenuCloseSound ();
-			KillAllMenus ();
+			MenuCloseSound();
+			KillAllMenus();
 		}
-	
+
 	
 	}
-	public void KillAllMenus () {
+	public void KillAllMenus() {
 		mainCanvas.enabled = false;
 		musicMenuCanvas.enabled = false;
 		instrumentsMenuCanvas.enabled = false;
@@ -61,15 +61,15 @@ public class MusicMenuScript : MonoBehaviour {
 	// Unity's UI tools require public void functions if you want to call them through their system.
 	// All menu sounds are functions below.
 	// This is an easy way to call sounds through the UI toolset.
-	public void ClickSound () {
+	public void ClickSound() {
 		if (menuCurrentlyOpen)
 			AudioSource.PlayClipAtPoint (clickSound, menuObject.position);
 	}
-	public void MenuOpenSound () {
+	public void MenuOpenSound() {
 		if (!menuCurrentlyOpen)
 			AudioSource.PlayClipAtPoint (menuOpenSound, menuObject.position);
 	}
-	public void MenuCloseSound () {
+	public void MenuCloseSound() {
 		if (menuCurrentlyOpen)
 			AudioSource.PlayClipAtPoint (menuCloseSound, menuObject.position);
 	}
