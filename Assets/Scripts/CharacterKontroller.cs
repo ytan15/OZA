@@ -57,6 +57,7 @@ public class CharacterKontroller : MonoBehaviour {
 		Debug.DrawLine(sightStart.position, sightEnd.position, Color.blue); //Visual Representation of Ray Jesus
 		notTraversable = Physics2D.Linecast(sightStart.position, sightEnd.position, whatIsGround);
 
+
 		if (grounded && Input.GetKeyDown(KeyCode.Space))
 		{
 			anim.SetBool("Ground",false);

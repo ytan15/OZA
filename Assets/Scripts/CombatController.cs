@@ -4,8 +4,8 @@ using System.Collections;
 public class CombatController : MonoBehaviour {
 
 	//                      C   C#  D   D#  E   F   F#  G   G#  A    A#   B    C    C#   D    D#   E    F    F#   G    G#   A    A#   B    C
-	//float[] noteValues = {1f, 2f, 3f, 4f, 5f, 6f, 7f, 8f, 9f, 10f, 11f, 12f, 13f, 14f, 15f, 16f, 17f, 18f, 19f, 20f, 21f, 22f, 23f, 24f. 25f};
-	// This was supposed to be useful until I decided it was stupid. Now it's just a good reference.
+	//float[] noteValues = {1f, 2f, 3f, 4f, 5f, 6f, 7f, 8f, 9f, 10f, 11f, 12f, 13f, 14f, 15f, 16f, 17f, 18f, 19f, 20f, 21f, 22f, 23f, 24f, 25f};
+	// This was supposed to be useful until I decided it was stupid. Now it's just a good reference. Also everything is a float becuase of an original plan I had.
 
 	// Basic C scale comes preloaded here
 	public float noteFirst = 1f;
@@ -36,7 +36,7 @@ public class CombatController : MonoBehaviour {
 	public float songValue; //The variable that tracks the current value of your song.
 	bool canPlay = true; //Checks if you are currently allowed to play.
 	public int randomizerIndex; //For use in the randomizer array
-	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f};	//A stupid 28 array
+	float[] randomNumbers = {1f, 3f, 4f, 6f, 7f, 6f, 3f, 3f, 7f, 3f, 8f, 6f, 9f, 3f, 9f, 7f, 2f, 6f, 2f, 7f, 1f, 6f, 9f, 2f, 7f, 4f, 3f, 6f, 8f, 8f, 8f};	//A stupid array
 
 	// All variables used to fire physical notes.
 	public Rigidbody2D musicNoteSm;
